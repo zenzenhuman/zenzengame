@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>禅然ドットノベル</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scanline-overlay" aria-hidden="true"></div>
+    <main class="game-shell">
+      <header class="game-header">
+        <div class="logo">ZENZEN<br />PIXEL DREAM</div>
+        <div class="hud-group">
+          <div class="badge" id="mood-badge">calm</div>
+          <button id="restart" class="ui-button">リスタート</button>
+        </div>
+      </header>
+
+      <section class="viewport" aria-live="polite">
+        <div class="viewport__glow" aria-hidden="true"></div>
+        <div class="viewport__background" id="background"></div>
+        <div class="viewport__character">
+          <div id="character" class="sprite" role="img" aria-live="off"></div>
+        </div>
+        <div class="textbox" id="textbox" role="group" aria-label="メッセージ">
+          <div class="textbox__frame"></div>
+          <div class="textbox__name" id="character-name"></div>
+          <div class="textbox__text" id="text"></div>
+          <div class="textbox__hint" id="advance-hint">タップでスキップ / スペースで選択</div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="心の状態">
+        <div class="stat" data-label="calm">
+          <span class="stat__label">CALM</span>
+          <div class="stat__track"><div class="stat__fill" id="stat-calm"></div></div>
+        </div>
+        <div class="stat" data-label="spark">
+          <span class="stat__label">SPARK</span>
+          <div class="stat__track"><div class="stat__fill" id="stat-spark"></div></div>
+        </div>
+        <div class="stat" data-label="insight">
+          <span class="stat__label">INSIGHT</span>
+          <div class="stat__track"><div class="stat__fill" id="stat-insight"></div></div>
+        </div>
+      </section>
+
+      <section class="choices" id="choices" aria-label="選択肢"></section>
+
+      <section class="achievements" id="achievements" aria-live="polite"></section>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
